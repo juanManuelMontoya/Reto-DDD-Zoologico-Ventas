@@ -3,6 +3,7 @@ package co.com.sofka.ventas.empleado;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.AggregateRoot;
 import co.com.sofka.ventas.empleado.events.EmpleadoCreado;
+import co.com.sofka.ventas.empleado.events.NombreCambiado;
 import co.com.sofka.ventas.empleado.values.CuentaId;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.values.IdentificacionId;
@@ -17,6 +18,15 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
     public Empleado(EmpleadoId entityId, Nombre nombre, CuentaId cuentaId, IdentificacionId identificacionId) {
         super(entityId);
         appendChange(new EmpleadoCreado(nombre,cuentaId,identificacionId)).apply();
+    }
+
+    private Empleado(EmpleadoId entityId){
+        super(entityId);
+        subscribe(new EmpleadoChange(this));
+    }
+
+    public void cambiarNombre(Nombre nombre){
+        appendChange(new NombreCambiado(nombre)).apply();
     }
 
     public Nombre nombre() {

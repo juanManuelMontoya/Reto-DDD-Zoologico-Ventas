@@ -7,7 +7,6 @@ import co.com.sofka.ventas.values.IdentificacionId;
 import co.com.sofka.ventas.values.Nombre;
 
 public class EmpleadoCreado extends DomainEvent {
-
     private final Nombre nombre;
     private final CuentaId cuentaId;
     private final IdentificacionId identificacionId;
