@@ -1,4 +1,4 @@
-package co.com.sofka.ventas.Vendedor.events;
+package co.com.sofka.ventas.vendedor.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;

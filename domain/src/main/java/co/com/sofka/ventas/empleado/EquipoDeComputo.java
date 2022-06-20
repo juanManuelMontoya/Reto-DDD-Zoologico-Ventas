@@ -1,10 +1,9 @@
 package co.com.sofka.ventas.empleado;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.ventas.Vendedor.values.NumeroDeSerie;
+import co.com.sofka.ventas.vendedor.values.NumeroDeSerie;
 import co.com.sofka.ventas.empleado.values.EquipoDeComputoId;
 import co.com.sofka.ventas.values.Descripcion;
-import co.com.sofka.ventas.values.Numero;
 
 public class EquipoDeComputo extends Entity<EquipoDeComputoId> {
 

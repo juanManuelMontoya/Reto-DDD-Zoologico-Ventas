@@ -1,8 +1,7 @@
 package co.com.sofka.ventas.venta.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.ventas.Vendedor.Vendedor;
-import co.com.sofka.ventas.Vendedor.values.VendedorId;
+import co.com.sofka.ventas.vendedor.values.VendedorId;
 import co.com.sofka.ventas.venta.values.ClienteId;
 import co.com.sofka.ventas.venta.values.PlanId;
 

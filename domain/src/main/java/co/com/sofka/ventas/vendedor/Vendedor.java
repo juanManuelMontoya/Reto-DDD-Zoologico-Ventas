@@ -1,15 +1,12 @@
-package co.com.sofka.ventas.Vendedor;
+package co.com.sofka.ventas.vendedor;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofka.ventas.Vendedor.events.EmpleadoCambiado;
-import co.com.sofka.ventas.Vendedor.events.EquipoDeComputoCambiado;
-import co.com.sofka.ventas.Vendedor.events.PuntoDeVentaCambiado;
-import co.com.sofka.ventas.Vendedor.events.VendedorCreado;
-import co.com.sofka.ventas.Vendedor.values.PuntoDeVentaID;
-import co.com.sofka.ventas.Vendedor.values.VendedorId;
-import co.com.sofka.ventas.empleado.Empleado;
-import co.com.sofka.ventas.empleado.EmpleadoChange;
-import co.com.sofka.ventas.empleado.EquipoDeComputo;
+import co.com.sofka.ventas.vendedor.events.EmpleadoCambiado;
+import co.com.sofka.ventas.vendedor.events.EquipoDeComputoCambiado;
+import co.com.sofka.ventas.vendedor.events.PuntoDeVentaCambiado;
+import co.com.sofka.ventas.vendedor.events.VendedorCreado;
+import co.com.sofka.ventas.vendedor.values.PuntoDeVentaID;
+import co.com.sofka.ventas.vendedor.values.VendedorId;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.empleado.values.EquipoDeComputoId;
 

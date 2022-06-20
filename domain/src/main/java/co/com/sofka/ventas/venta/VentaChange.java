@@ -14,8 +14,9 @@ public class VentaChange extends EventChange {
             venta.planId = event.getPlanId();
         });
 
-        apply((PlanCambiado event) -> {
-            venta.planId = event.getPlanId();
-        });
+        apply((PlanCambiado event) -> venta.planId = event.getPlanId());
+
+        /*apply((NombreClienteActualizado event) -> {
+        });*/
     }
 }

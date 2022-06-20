@@ -1,11 +1,6 @@
-package co.com.sofka.ventas.Vendedor.values;
+package co.com.sofka.ventas.vendedor.values;
 
 import co.com.sofka.domain.generic.ValueObject;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Locale;
-import java.util.Map;
 
 public class Horario implements ValueObject<String> {
 

@@ -13,6 +13,9 @@ public class Descripcion implements ValueObject<String> {
         if (this.descripcion.isBlank()){
             throw new IllegalArgumentException("La descripcion no puede estar en blanco");
         }
+        if (this.descripcion.length() < 5){
+            throw new IllegalArgumentException("La descripcion debe contener mas caracteres");
+        }
     }
 
     @Override

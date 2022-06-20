@@ -1,13 +1,11 @@
-package co.com.sofka.ventas.Vendedor;
+package co.com.sofka.ventas.vendedor;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.ventas.Vendedor.values.Disponible;
-import co.com.sofka.ventas.Vendedor.values.Horario;
-import co.com.sofka.ventas.Vendedor.values.PuntoDeVentaID;
+import co.com.sofka.ventas.vendedor.values.Disponible;
+import co.com.sofka.ventas.vendedor.values.Horario;
+import co.com.sofka.ventas.vendedor.values.PuntoDeVentaID;
 import co.com.sofka.ventas.values.Numero;
 
-import java.awt.*;
-import java.io.ObjectStreamException;
 import java.util.Objects;
 
 public class PuntoDeVenta extends Entity<PuntoDeVentaID> {

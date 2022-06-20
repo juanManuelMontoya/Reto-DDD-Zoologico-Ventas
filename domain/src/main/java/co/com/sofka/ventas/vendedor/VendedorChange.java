@@ -1,10 +1,10 @@
-package co.com.sofka.ventas.Vendedor;
+package co.com.sofka.ventas.vendedor;
 
 import co.com.sofka.domain.generic.EventChange;
-import co.com.sofka.ventas.Vendedor.events.EmpleadoCambiado;
-import co.com.sofka.ventas.Vendedor.events.EquipoDeComputoCambiado;
-import co.com.sofka.ventas.Vendedor.events.PuntoDeVentaCambiado;
-import co.com.sofka.ventas.Vendedor.events.VendedorCreado;
+import co.com.sofka.ventas.vendedor.events.EmpleadoCambiado;
+import co.com.sofka.ventas.vendedor.events.EquipoDeComputoCambiado;
+import co.com.sofka.ventas.vendedor.events.PuntoDeVentaCambiado;
+import co.com.sofka.ventas.vendedor.events.VendedorCreado;
 
 public class VendedorChange extends EventChange {
     public VendedorChange(Vendedor vendedor) {

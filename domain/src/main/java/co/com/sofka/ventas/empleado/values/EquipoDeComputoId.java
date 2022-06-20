@@ -1,7 +1,6 @@
 package co.com.sofka.ventas.empleado.values;
 
 import co.com.sofka.domain.generic.Identity;
-import co.com.sofka.ventas.Vendedor.values.VendedorId;
 
 public class EquipoDeComputoId extends Identity {
 
