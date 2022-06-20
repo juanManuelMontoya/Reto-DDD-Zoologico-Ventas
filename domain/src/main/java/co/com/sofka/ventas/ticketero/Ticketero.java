@@ -1,6 +1,7 @@
 package co.com.sofka.ventas.ticketero;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.ventas.empleado.Empleado;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.ticketero.events.EmpleadoAsignado;
@@ -8,10 +9,9 @@ import co.com.sofka.ventas.ticketero.events.EntradaCambiada;
 import co.com.sofka.ventas.ticketero.events.TicketAgregado;
 import co.com.sofka.ventas.ticketero.events.TicketeroCreado;
 import co.com.sofka.ventas.ticketero.values.*;
-import co.com.sofka.ventas.values.Descripcion;
-import co.com.sofka.ventas.venta.VentaChange;
-import co.com.sofka.ventas.venta.values.VentaId;
+import co.com.sofka.ventas.general.values.Descripcion;
 
+import java.util.List;
 import java.util.Set;
 
 public class Ticketero extends AggregateEvent<TicketeroId> {
@@ -30,6 +30,11 @@ public class Ticketero extends AggregateEvent<TicketeroId> {
         subscribe(new TicketeroChange(this));
     }
 
+    public static Ticketero from(TicketeroId ticketeroId, List<DomainEvent> events){
+        var ticketero = new Ticketero(ticketeroId);
+        events.forEach(ticketero::applyEvent);
+        return ticketero;
+    }
     public void agregarTicket(TicketId ticketId, Codigo codigo, Color color, Descripcion descripcion){
         appendChange(new TicketAgregado(ticketId,codigo,color,descripcion)).apply();
     }

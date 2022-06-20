@@ -1,7 +1,6 @@
 package co.com.sofka.ventas.empleado.values;
 
 import co.com.sofka.domain.generic.ValueObject;
-import co.com.sofka.ventas.values.Nombre;
 
 import java.util.Objects;
 

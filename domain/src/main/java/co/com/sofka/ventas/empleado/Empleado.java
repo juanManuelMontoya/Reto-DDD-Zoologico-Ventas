@@ -1,13 +1,15 @@
 package co.com.sofka.ventas.empleado;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import co.com.sofka.domain.generic.AggregateRoot;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.ventas.empleado.events.EmpleadoCreado;
 import co.com.sofka.ventas.empleado.events.NombreCambiado;
 import co.com.sofka.ventas.empleado.values.CuentaId;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
-import co.com.sofka.ventas.values.IdentificacionId;
-import co.com.sofka.ventas.values.Nombre;
+import co.com.sofka.ventas.general.values.IdentificacionId;
+import co.com.sofka.ventas.general.values.Nombre;
+
+import java.util.List;
 
 public class Empleado extends AggregateEvent<EmpleadoId> {
 
@@ -23,6 +25,12 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
     private Empleado(EmpleadoId entityId){
         super(entityId);
         subscribe(new EmpleadoChange(this));
+    }
+
+    public static Empleado from(EmpleadoId empleadoId, List<DomainEvent> events){
+        var empleado = new Empleado(empleadoId);
+        events.forEach(empleado::applyEvent);
+        return empleado;
     }
 
     public void cambiarNombre(Nombre nombre){

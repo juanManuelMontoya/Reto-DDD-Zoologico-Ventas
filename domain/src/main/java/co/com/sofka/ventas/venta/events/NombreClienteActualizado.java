@@ -1,7 +1,7 @@
 package co.com.sofka.ventas.venta.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.ventas.values.Nombre;
+import co.com.sofka.ventas.general.values.Nombre;
 import co.com.sofka.ventas.venta.values.ClienteId;
 
 public class NombreClienteActualizado extends DomainEvent {

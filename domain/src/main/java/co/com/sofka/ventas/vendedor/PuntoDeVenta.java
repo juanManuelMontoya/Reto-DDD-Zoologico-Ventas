@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.ventas.vendedor.values.Disponible;
 import co.com.sofka.ventas.vendedor.values.Horario;
 import co.com.sofka.ventas.vendedor.values.PuntoDeVentaID;
-import co.com.sofka.ventas.values.Numero;
+import co.com.sofka.ventas.general.values.Numero;
 
 import java.util.Objects;
 

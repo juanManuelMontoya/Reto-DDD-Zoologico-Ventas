@@ -1,8 +1,8 @@
 package co.com.sofka.ventas.venta;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.ventas.values.Descripcion;
-import co.com.sofka.ventas.values.Nombre;
+import co.com.sofka.ventas.general.values.Descripcion;
+import co.com.sofka.ventas.general.values.Nombre;
 import co.com.sofka.ventas.venta.values.PlanId;
 import co.com.sofka.ventas.venta.values.Valor;
 

@@ -4,9 +4,7 @@ import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.ventas.ticketero.values.Codigo;
 import co.com.sofka.ventas.ticketero.values.Color;
 import co.com.sofka.ventas.ticketero.values.TicketId;
-import co.com.sofka.ventas.values.Descripcion;
-
-import java.util.Objects;
+import co.com.sofka.ventas.general.values.Descripcion;
 
 public class Ticket extends Entity<TicketId> {
 

@@ -3,7 +3,7 @@ package co.com.sofka.ventas.ticketero;
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.ventas.ticketero.values.EntradaId;
 import co.com.sofka.ventas.ticketero.values.Ubicacion;
-import co.com.sofka.ventas.values.Numero;
+import co.com.sofka.ventas.general.values.Numero;
 import co.com.sofka.ventas.vendedor.values.Disponible;
 
 public class Entrada extends Entity<EntradaId> {

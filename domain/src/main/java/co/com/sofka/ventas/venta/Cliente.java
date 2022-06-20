@@ -1,9 +1,8 @@
 package co.com.sofka.ventas.venta;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.ventas.values.IdentificacionId;
-import co.com.sofka.ventas.values.Nombre;
-import co.com.sofka.ventas.values.TipoDocumento;
+import co.com.sofka.ventas.general.values.IdentificacionId;
+import co.com.sofka.ventas.general.values.Nombre;
 import co.com.sofka.ventas.venta.values.ClienteId;
 
 public class Cliente extends Entity<ClienteId> {

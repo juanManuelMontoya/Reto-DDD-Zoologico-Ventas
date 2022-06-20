@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.ventas.ticketero.values.Codigo;
 import co.com.sofka.ventas.ticketero.values.Color;
 import co.com.sofka.ventas.ticketero.values.TicketId;
-import co.com.sofka.ventas.values.Descripcion;
+import co.com.sofka.ventas.general.values.Descripcion;
 
 public class TicketAgregado extends DomainEvent {
 

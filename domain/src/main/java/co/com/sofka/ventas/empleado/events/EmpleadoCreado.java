@@ -1,10 +1,9 @@
 package co.com.sofka.ventas.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.ventas.empleado.Cuenta;
 import co.com.sofka.ventas.empleado.values.CuentaId;
-import co.com.sofka.ventas.values.IdentificacionId;
-import co.com.sofka.ventas.values.Nombre;
+import co.com.sofka.ventas.general.values.IdentificacionId;
+import co.com.sofka.ventas.general.values.Nombre;
 
 public class EmpleadoCreado extends DomainEvent {
     private final Nombre nombre;
