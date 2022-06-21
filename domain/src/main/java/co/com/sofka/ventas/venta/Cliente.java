@@ -10,8 +10,8 @@ public class Cliente extends Entity<ClienteId> {
     protected Nombre nombre;
     protected IdentificacionId identificacionId;
 
-    public Cliente(ClienteId entityId, Nombre nombre, IdentificacionId identificacionId) {
-        super(entityId);
+    public Cliente(ClienteId clienteId, Nombre nombre, IdentificacionId identificacionId) {
+        super(clienteId);
         this.nombre = nombre;
         this.identificacionId = identificacionId;
     }

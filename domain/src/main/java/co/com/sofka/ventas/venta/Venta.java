@@ -2,7 +2,11 @@ package co.com.sofka.ventas.venta;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.ventas.empleado.values.EmpleadoId;
+import co.com.sofka.ventas.general.values.Nombre;
 import co.com.sofka.ventas.vendedor.values.VendedorId;
+import co.com.sofka.ventas.venta.events.NombreClienteActualizado;
+import co.com.sofka.ventas.venta.events.NombreEmpleadoActualizado;
 import co.com.sofka.ventas.venta.events.PlanCambiado;
 import co.com.sofka.ventas.venta.events.VentaCreada;
 import co.com.sofka.ventas.venta.values.ClienteId;
@@ -33,13 +37,13 @@ public class Venta extends AggregateEvent<VentaId> {
         return venta;
     }
 
-    /*public void actualizarNombreDeCLiente(ClienteId clienteId, Nombre nombre){
+    public void actualizarNombreDeCLiente(ClienteId clienteId, Nombre nombre){
         appendChange(new NombreClienteActualizado(clienteId,nombre)).apply();
     }
 
     public void actualizarNombreDeEmpleado(EmpleadoId empleadoId, Nombre nombre){
         appendChange(new NombreEmpleadoActualizado(empleadoId,nombre)).apply();
-    }*/
+    }
 
     public void cambiarPlan(PlanId planId){
         appendChange(new PlanCambiado(planId)).apply();
