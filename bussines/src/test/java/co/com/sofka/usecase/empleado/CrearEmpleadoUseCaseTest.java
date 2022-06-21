@@ -2,15 +2,13 @@ package co.com.sofka.usecase.empleado;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
-import co.com.sofka.ventas.empleado.commands.CrearEmpleado;
+import co.com.sofka.ventas.empleado.commands.CrearEmpleadoCommand;
 import co.com.sofka.ventas.empleado.events.EmpleadoCreado;
 import co.com.sofka.ventas.empleado.values.CuentaId;
 import co.com.sofka.ventas.general.values.IdentificacionId;
 import co.com.sofka.ventas.general.values.Nombre;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CrearEmpleadoUseCaseTest {
 
@@ -20,7 +18,7 @@ class CrearEmpleadoUseCaseTest {
         var cuentaId = new CuentaId("cuenta1");
         var identificacionId = new IdentificacionId("123");
 
-        var command = new CrearEmpleado(nombre,cuentaId,identificacionId);
+        var command = new CrearEmpleadoCommand(nombre,cuentaId,identificacionId);
 
         var useCase = new CrearEmpleadoUseCase();
 

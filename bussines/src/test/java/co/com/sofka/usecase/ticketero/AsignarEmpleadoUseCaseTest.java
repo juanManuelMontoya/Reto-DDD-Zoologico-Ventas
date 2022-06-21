@@ -2,15 +2,12 @@ package co.com.sofka.usecase.ticketero;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
-import co.com.sofka.ventas.empleado.Empleado;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
-import co.com.sofka.ventas.ticketero.commands.AsignarEmpleado;
+import co.com.sofka.ventas.ticketero.commands.AsignarEmpleadoCommand;
 import co.com.sofka.ventas.ticketero.events.EmpleadoAsignado;
 import co.com.sofka.ventas.ticketero.values.TicketeroId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AsignarEmpleadoUseCaseTest {
 
@@ -19,7 +16,7 @@ class AsignarEmpleadoUseCaseTest {
         var empleadoId = new EmpleadoId("435");
         var ticketeroId = new TicketeroId("12");
 
-        var command  = new AsignarEmpleado(ticketeroId,empleadoId);
+        var command  = new AsignarEmpleadoCommand(ticketeroId,empleadoId);
 
         var useCase = new AsignarEmpleadoUseCase();
 

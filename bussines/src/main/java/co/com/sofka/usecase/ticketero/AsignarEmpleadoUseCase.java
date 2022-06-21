@@ -5,12 +5,12 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.ticketero.Ticketero;
-import co.com.sofka.ventas.ticketero.commands.AsignarEmpleado;
+import co.com.sofka.ventas.ticketero.commands.AsignarEmpleadoCommand;
 import co.com.sofka.ventas.ticketero.values.EntradaId;
 
-public class AsignarEmpleadoUseCase extends UseCase<RequestCommand<AsignarEmpleado>, ResponseEvents> {
+public class AsignarEmpleadoUseCase extends UseCase<RequestCommand<AsignarEmpleadoCommand>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<AsignarEmpleado> input) {
+    public void executeUseCase(RequestCommand<AsignarEmpleadoCommand> input) {
 
         var command = input.getCommand();
 

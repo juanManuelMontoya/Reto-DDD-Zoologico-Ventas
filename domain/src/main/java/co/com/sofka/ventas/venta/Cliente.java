@@ -4,16 +4,20 @@ import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.ventas.general.values.IdentificacionId;
 import co.com.sofka.ventas.general.values.Nombre;
 import co.com.sofka.ventas.venta.values.ClienteId;
+import co.com.sofka.ventas.venta.values.NumeroTelefono;
 
 public class Cliente extends Entity<ClienteId> {
 
     protected Nombre nombre;
     protected IdentificacionId identificacionId;
 
-    public Cliente(ClienteId clienteId, Nombre nombre, IdentificacionId identificacionId) {
+    protected NumeroTelefono numeroTelefono;
+
+    public Cliente(ClienteId clienteId, Nombre nombre, IdentificacionId identificacionId, NumeroTelefono numeroTelefono) {
         super(clienteId);
         this.nombre = nombre;
         this.identificacionId = identificacionId;
+        this.numeroTelefono = numeroTelefono;
     }
 
     public void cambiarNombre (Nombre nombre){
@@ -26,5 +30,9 @@ public class Cliente extends Entity<ClienteId> {
 
     public IdentificacionId identificacionId() {
         return identificacionId;
+    }
+
+    public NumeroTelefono numeroTelefono() {
+        return numeroTelefono;
     }
 }

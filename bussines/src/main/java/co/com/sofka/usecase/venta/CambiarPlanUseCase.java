@@ -5,13 +5,13 @@ import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.ventas.vendedor.values.VendedorId;
 import co.com.sofka.ventas.venta.Venta;
-import co.com.sofka.ventas.venta.commands.CambiarPlan;
+import co.com.sofka.ventas.venta.commands.CambiarPlanCommand;
 import co.com.sofka.ventas.venta.values.ClienteId;
 import co.com.sofka.ventas.venta.values.PlanId;
 
-public class CambiarPlanUseCase extends UseCase<RequestCommand<CambiarPlan>, ResponseEvents> {
+public class CambiarPlanUseCase extends UseCase<RequestCommand<CambiarPlanCommand>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<CambiarPlan> input) {
+    public void executeUseCase(RequestCommand<CambiarPlanCommand> input) {
         var command = input.getCommand();
 
         var venta = new Venta(command.getVentaId(),new VendedorId("321"),new ClienteId("1193"),new PlanId("132"));

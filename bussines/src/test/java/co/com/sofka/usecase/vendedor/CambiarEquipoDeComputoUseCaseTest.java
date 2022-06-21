@@ -3,13 +3,11 @@ package co.com.sofka.usecase.vendedor;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.ventas.empleado.values.EquipoDeComputoId;
-import co.com.sofka.ventas.vendedor.commands.CambiarEquipoDeComputo;
+import co.com.sofka.ventas.vendedor.commands.CambiarEquipoDeComputoCommand;
 import co.com.sofka.ventas.vendedor.events.EquipoDeComputoCambiado;
 import co.com.sofka.ventas.vendedor.values.VendedorId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CambiarEquipoDeComputoUseCaseTest {
 
@@ -19,7 +17,7 @@ class CambiarEquipoDeComputoUseCaseTest {
         var computoId = new EquipoDeComputoId("321");
         var vendedorID = new VendedorId("145");
 
-        var command = new CambiarEquipoDeComputo(computoId,vendedorID);
+        var command = new CambiarEquipoDeComputoCommand(computoId,vendedorID);
 
         var usecase = new CambiarEquipoDeComputoUseCase();
 

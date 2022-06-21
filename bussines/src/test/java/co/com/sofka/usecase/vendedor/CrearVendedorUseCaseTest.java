@@ -4,13 +4,11 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.empleado.values.EquipoDeComputoId;
-import co.com.sofka.ventas.vendedor.commands.CrearVendedor;
+import co.com.sofka.ventas.vendedor.commands.CrearVendedorCommand;
 import co.com.sofka.ventas.vendedor.events.VendedorCreado;
 import co.com.sofka.ventas.vendedor.values.PuntoDeVentaID;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CrearVendedorUseCaseTest {
 
@@ -20,7 +18,7 @@ class CrearVendedorUseCaseTest {
         var empleadoId = new EmpleadoId("1193");
         var equipoDeComputo = new EquipoDeComputoId("ab23");
 
-        var command = new CrearVendedor(puntoDeVentaID,equipoDeComputo,empleadoId);
+        var command = new CrearVendedorCommand(puntoDeVentaID,equipoDeComputo,empleadoId);
 
         var usecase = new CrearVendedorUseCase();
 

@@ -2,14 +2,13 @@ package co.com.sofka.usecase.empleado;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
-import co.com.sofka.ventas.empleado.commands.CambiarNombre;
+import co.com.sofka.ventas.empleado.commands.CambiarNombreCommand;
 import co.com.sofka.ventas.empleado.events.NombreCambiado;
+import co.com.sofka.ventas.empleado.values.CuentaId;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.general.values.Nombre;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CambiarNombreUseCaseTest {
 
@@ -19,8 +18,9 @@ class CambiarNombreUseCaseTest {
         //Add
         var id = new EmpleadoId("123");
         var nombre = new Nombre("julian");
+        var cuentaId = new CuentaId("142");
 
-        var command = new CambiarNombre(nombre,id);
+        var command = new CambiarNombreCommand(cuentaId,nombre,id);
 
         var useCase = new CambiarNombreUseCase();
 

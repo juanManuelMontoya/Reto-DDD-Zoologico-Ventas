@@ -1,17 +1,13 @@
 package co.com.sofka.usecase.vendedor;
 
-import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
-import co.com.sofka.ventas.empleado.values.EquipoDeComputoId;
-import co.com.sofka.ventas.vendedor.commands.CambiarPuntoDeVenta;
+import co.com.sofka.ventas.vendedor.commands.CambiarPuntoDeVentaCommand;
 import co.com.sofka.ventas.vendedor.events.PuntoDeVentaCambiado;
 import co.com.sofka.ventas.vendedor.values.PuntoDeVentaID;
 import co.com.sofka.ventas.vendedor.values.VendedorId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CambiarPuntoDeVentaUseCaseTest {
 
@@ -20,7 +16,7 @@ class CambiarPuntoDeVentaUseCaseTest {
         var puntoDeVentaId = new PuntoDeVentaID("2");
         var vendedorID = new VendedorId("145");
 
-        var command = new CambiarPuntoDeVenta(puntoDeVentaId,vendedorID);
+        var command = new CambiarPuntoDeVentaCommand(puntoDeVentaId,vendedorID);
 
         var usecase = new CambiarPuntoDeVentaUseCase();
 

@@ -3,7 +3,7 @@ package co.com.sofka.usecase.ticketero;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.ventas.general.values.Descripcion;
-import co.com.sofka.ventas.ticketero.commands.AgregarTicket;
+import co.com.sofka.ventas.ticketero.commands.AgregarTicketCommand;
 import co.com.sofka.ventas.ticketero.events.TicketAgregado;
 import co.com.sofka.ventas.ticketero.values.Codigo;
 import co.com.sofka.ventas.ticketero.values.Color;
@@ -11,8 +11,6 @@ import co.com.sofka.ventas.ticketero.values.TicketId;
 import co.com.sofka.ventas.ticketero.values.TicketeroId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AgregarTicketUseCaseTest {
 
@@ -24,7 +22,7 @@ class AgregarTicketUseCaseTest {
         var codigo      = new Codigo("1234");
         var descripcion = new Descripcion("Manilla para entrar al zoologico");
 
-        var command = new AgregarTicket(ticketeroId,ticketId,codigo,color,descripcion);
+        var command = new AgregarTicketCommand(ticketeroId,ticketId,codigo,color,descripcion);
 
         var useCase = new AgregarTicketUseCase();
 

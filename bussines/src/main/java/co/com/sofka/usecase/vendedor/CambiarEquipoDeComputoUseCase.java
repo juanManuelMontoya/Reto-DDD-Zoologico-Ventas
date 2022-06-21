@@ -6,12 +6,12 @@ import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.ventas.empleado.values.EmpleadoId;
 import co.com.sofka.ventas.empleado.values.EquipoDeComputoId;
 import co.com.sofka.ventas.vendedor.Vendedor;
-import co.com.sofka.ventas.vendedor.commands.CambiarEquipoDeComputo;
+import co.com.sofka.ventas.vendedor.commands.CambiarEquipoDeComputoCommand;
 import co.com.sofka.ventas.vendedor.values.PuntoDeVentaID;
 
-public class CambiarEquipoDeComputoUseCase extends UseCase<RequestCommand<CambiarEquipoDeComputo>, ResponseEvents> {
+public class CambiarEquipoDeComputoUseCase extends UseCase<RequestCommand<CambiarEquipoDeComputoCommand>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<CambiarEquipoDeComputo> input) {
+    public void executeUseCase(RequestCommand<CambiarEquipoDeComputoCommand> input) {
 
         var command = input.getCommand();
 

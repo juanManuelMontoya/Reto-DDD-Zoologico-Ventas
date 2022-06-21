@@ -4,12 +4,12 @@ import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.business.support.ResponseEvents;
 import co.com.sofka.ventas.venta.Venta;
-import co.com.sofka.ventas.venta.commands.CrearVenta;
+import co.com.sofka.ventas.venta.commands.CrearVentaCommand;
 import co.com.sofka.ventas.venta.values.VentaId;
 
-public class CrearVentaUseCase extends UseCase<RequestCommand<CrearVenta>, ResponseEvents> {
+public class CrearVentaUseCase extends UseCase<RequestCommand<CrearVentaCommand>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<CrearVenta> input) {
+    public void executeUseCase(RequestCommand<CrearVentaCommand> input) {
 
         var command = input.getCommand();
 
